@@ -14,19 +14,23 @@ function App() {
 	const [message, setMessage] = useState([]);
 	useEffect(() => {
 		socket.on('message', (msg) => {
-			setMessage((message) => [...message, msg]);
-			console.log(message);
+			console.log('huhu');
+			if (msg.priority >= 7) {
+				setMessage((message) => [...message, msg]);
+				console.log(message);
+			}
 		});
-	}, [message]);
+	}, []);
 
 	return (
 		<div className='App'>
-			<h3>message</h3>
+			<h1>Message Queue</h1>
 			<TableContainer>
 				<Table sx={{ minWidth: 650 }} aria-label='simple table'>
 					<TableHead>
 						<TableRow>
-							<TableCell>message</TableCell>
+							<TableCell>Message</TableCell>
+							<TableCell>Date</TableCell>
 							<TableCell>TimeStamp</TableCell>
 							<TableCell>Priority</TableCell>
 						</TableRow>
@@ -37,6 +41,7 @@ function App() {
 								return (
 									<TableRow key={index}>
 										<TableCell>{msg.msg}</TableCell>
+										<TableCell>{msg.date}</TableCell>
 										<TableCell>{msg.timeStamp}</TableCell>
 										<TableCell>{msg.priority}</TableCell>
 									</TableRow>

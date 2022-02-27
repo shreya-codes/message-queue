@@ -1,7 +1,7 @@
 # message-queue
 
 - Pre-requirements
-  - ` Node.js LTS`
+  - ` Node.js `
   - `RabbitMQ`
     Installed in the computer.
 - cd into cloned directory.
@@ -11,8 +11,8 @@
   - **frontend** : contains frontend of the application
 
   - **backend** : contains the backend code with two directories
-    _ **receiver** : contains backend code for the subscriber
-    _ **sender** : contains backend code for the publisher
+    - **receiver** : contains backend code for the subscriber
+    - **sender** : contains backend code for the publisher
 
 - cd into each of the above mentioned directories in seperate terminal and,
 

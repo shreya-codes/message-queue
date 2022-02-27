@@ -14,7 +14,7 @@
     - **receiver** : contains backend code for the subscriber
     - **sender** : contains backend code for the publisher
 
-- cd into each of the above mentioned directories in seperate terminal and,
+- cd into each of the above mentioned directories i.e:frontend,sender and receiver in seperate terminal and,
 
   - Install require dependencies:
     `npm install`

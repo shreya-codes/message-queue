@@ -54,7 +54,6 @@ amqp.connect('amqp://localhost', (connectionError, connection) => {
 			};
 
 			channel.sendToQueue(queueName, Buffer.from(JSON.stringify(information)));
-			console.log(JSON.stringify(information));
 		}, 50);
 	});
 });

@@ -14,11 +14,7 @@ function App() {
 	const [message, setMessage] = useState([]);
 	useEffect(() => {
 		socket.on('message', (msg) => {
-			console.log('huhu');
-			if (msg.priority >= 7) {
-				setMessage((message) => [...message, msg]);
-				console.log(message);
-			}
+			setMessage((message) => [...message, msg]);
 		});
 	}, []);
 

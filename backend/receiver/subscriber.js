@@ -39,8 +39,9 @@ io.on('connection', (socket) => {
 				(messages) => {
 					const msg = messages.content.toString();
 					const message = JSON.parse(msg);
-					console.log(message);
-					socket.emit('message', message);
+					if (message.priority >= 7) {
+						socket.emit('message', message);
+					}
 				},
 				{
 					noAck: true,
